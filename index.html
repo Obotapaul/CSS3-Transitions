@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Animations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dynamic Image Gallery</h1>
+            <div class="theme-toggle-container">
+                <span class="theme-label">Theme:</span>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="toggle-thumb"></span>
+                </button>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="filter-controls">
+                <h3>Filter Images</h3>
+                <div class="button-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
+                    <button class="filter-btn" data-filter="abstract">Abstract</button>
+                </div>
+            </div>
+            
+            <div class="animation-controls">
+                <h3>Animation Style</h3>
+                <div class="button-group">
+                    <button class="animation-btn active" data-animation="fade">Fade</button>
+                    <button class="animation-btn" data-animation="slide">Slide</button>
+                    <button class="animation-btn" data-animation="scale">Scale</button>
+                    <button class="animation-btn" data-animation="rotate">Rotate</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery" id="gallery">
+            <!-- Images will be loaded dynamically via JavaScript -->
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <span class="close-btn">&times;</span>
+                <img id="lightbox-img" src="" alt="Lightbox image">
+                <div class="image-info">
+                    <h3 id="image-title"></h3>
+                    <p id="image-description"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="preferences-panel">
+            <h3>Your Preferences</h3>
+            <p>Your theme and animation preferences are automatically saved.</p>
+            <button id="resetPrefs" class="reset-btn">Reset All Preferences</button>
+        </div>
+
+        <footer>
+            <p>Click on any image to view it in the lightbox. Your preferences are saved automatically.</p>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification">
+        <p id="notification-text">Notification message here</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
